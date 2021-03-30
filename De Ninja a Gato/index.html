@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script>
+        $(document).ready(function () {
+
+            
+            $('.hide').hide();
+
+            $('img').click(function () {
+
+                console.log('clickea a',$(this).attr('alt'));
+
+                if ($(this).attr('alt') == 'gato1' || $(this).attr('alt') == 'ninja1') {
+                    $('.gato1').toggle(); $('.ninja1').toggle();
+                }
+                if ($(this).attr('alt') == 'gato2' || $(this).attr('alt') == 'ninja2') {
+                    $('.gato2').toggle(); $('.ninja2').toggle();
+                }
+                if ($(this).attr('alt') == 'gato3' || $(this).attr('alt') == 'ninja3') {
+                    $('.gato3').toggle(); $('.ninja3').toggle();
+                }
+                if ($(this).attr('alt') == 'gato4' || $(this).attr('alt') == 'ninja4') {
+                    $('.gato4').toggle(); $('.ninja4').toggle();
+                }
+                if ($(this).attr('alt') == 'gato5' || $(this).attr('alt') == 'ninja5') {
+                    $('.gato5').toggle(); $('.ninja5').toggle();
+                }
+
+            });
+
+
+        });
+
+
+    </script>
+</head>
+
+<body>
+
+    <section class="imagenes">
+        <img class="show gato1" src="img/cat0.png" alt="gato1">
+        <img class="hide ninja1" src="img/ninja0.png" alt="ninja1">
+        <img class="hide gato2" src="img/cat1.png" alt="gato2">
+        <img class="show ninja2" src="img/ninja1.png" alt="ninja2">
+        <img class="hide gato3" src="img/cat2.png" alt="gato3">
+        <img class="show ninja3" src="img/ninja2.png" alt="ninja3">
+        <img class="show gato4" src="img/cat3.png" alt="gato4">
+        <img class="hide ninja4" src="img/ninja3.png" alt="ninja4">
+        <img class="show gato5" src="img/cat4.png" alt="gato5">
+        <img class="hide ninja5" src="img/ninja4.png" alt="ninja5">
+
+
+
+    </section>
+
+</body>
+
+</html>
