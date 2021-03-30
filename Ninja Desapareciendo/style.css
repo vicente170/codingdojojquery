@@ -1,0 +1,14 @@
+* {
+    /* outline:1px dotted red; */
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  }
+
+.ninja-section{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:2rem;
+}
+
+.ninja-section img{
+    width:100%;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Desapareciendo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script>
+        $(document).ready(function () {
+
+            $('img').click(function(){
+                $(this).hide();
+            });
+
+            $('button').click(()=>{
+                $('img').show();
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+
+    <h1>jQuery - Assignment 1</h1>
+    <h2>Ninja Desapareciendo</h2>
+
+    <section class="ninja-section">
+        <img src="img/ninja.jpg" alt="Ninja man">
+        <img src="img/ninja.jpg" alt="Ninja man">
+        <img src="img/ninja.jpg" alt="Ninja man">
+        <img src="img/ninja.jpg" alt="Ninja man">
+        <img src="img/ninja.jpg" alt="Ninja man">
+        <img src="img/ninja.jpg" alt="Ninja man">
+        <img src="img/ninja.jpg" alt="Ninja man">
+        <img src="img/ninja.jpg" alt="Ninja man">
+    </section>
+
+    <button>RESTORE</button>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script>
+        $(document).ready(function () {
+
+            /* Arrow Function */
+            $('p').click(() => {
+                alert('Se ha hecho click en p!');
+            })
+
+            $('#btnjq').click(function() {
+               $('#pbuttonjq').css('background-color','purple');
+            })
+
+            $('p.second-p').css('background-color','red');
+
+        });
+
+    </script>
+</head>
+<body>
+
+    <p id="first-p">Hello Worlds - raw javascript background</p>
+    <p class="second-p">Bye world - jQuery Background.</p>
+    <p id="pbutton">Texto modificado por botón - raw js</p>
+    <button id="btn">Click Me</button>
+
+    <p id="pbuttonjq">Texto modificado por botón - jQuery</p>
+    <button id="btnjq">Click Me</button>
+
+
+    <script>
+        console.log(document);
+        console.dir(document); /* Todas las propiedades de document. */
+        console.log(document.getElementById('first-p'));
+        console.log(document.getElementsByTagName('p')); /* Todos los p */
+
+        var firstp=document.getElementById('first-p');
+        firstp.style.backgroundColor='green';
+
+        var pbutton=document.getElementById('pbutton');
+
+        var btn= document.getElementById('btn');
+        btn.addEventListener('click', (function(){
+            pbutton.style.backgroundColor='yellow';
+        }))
+
+    </script>
+</body>
+</html>
