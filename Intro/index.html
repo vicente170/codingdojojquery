@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Intro to jQuery</title>
+
+    <script>
+        $(document).ready(function () {
+
+            /* Arrow Function */
+            $('h1').click(()=> {
+                $('p').toggle();
+            })
+
+            /* El método hover recibe 2 funciones. */
+            $('h3').hover(function(){
+
+                $('h4').text('estas arriba del h4');
+
+            },function(){
+                $('h4').text('texto inicial');
+            })
+
+            $('button#appender').click(function(){
+                $('p.acumular').append('Texto añadido al final del p. ')
+            })
+
+            $('button#changecss').click(function(){
+                $(this).css('background-color','yellow')
+            })
+
+        });
+
+
+    </script>
+</head>
+
+<body>
+
+    <h1>HOLA MUNDO</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium numquam officia autem libero quibusdam
+        sunt a maiores at blanditiis error dolore molestiae, voluptatum quidem, debitis hic consequuntur, iusto
+        repudiandae optio.
+    </p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium numquam officia autem libero quibusdam
+        sunt a maiores at blanditiis error dolore molestiae, voluptatum quidem, debitis hic consequuntur, iusto
+        repudiandae optio.
+    </p>
+
+    <h3>Pasa el mouse por aquí</h3>
+    <h4>Texto inicial</h4>
+
+    <p class="acumular">Agreguemos texto aquí</p>
+    <button id="appender">Agregar Texto</button>
+
+    <button id="changecss">Cambiar background</button>
+
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My jQuery basic assignment - Vicente Peralta</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script>
+        $(document).ready(function () {
+
+            /* Arrow Function */
+            $('#clickbtn').click(() => {
+                alert('Se ha hecho click en el botón!');
+            })
+
+            $('#hidebtn').click(() => {
+                $('.hideshowp').hide();
+            })
+            $('#showbtn').click(() => {
+                $('.hideshowp').show();
+            })
+            $('#togglebtn').click(() => {
+                $('.togglep').toggle();
+            })
+            $('#slideupbtn').click(() => {
+                $('.slidep').slideUp();
+            })
+            $('#slidedownbtn').click(() => {
+                $('.slidep').slideDown();
+            })
+            $('#slidetogglebtn').click(() => {
+                $('.slidep').slideToggle();
+            })
+            $('#fadeinbtn').click(() => {
+                $('.fadep').fadeIn();
+            })
+            $('#fadeoutbtn').click(() => {
+                $('.fadep').fadeOut();
+            })
+            $('#addredbtn').click(function() {
+                $('.addp').removeClass('green');
+                $('.addp').addClass('red');
+            })
+            $('#addgreenbtn').click(function() {
+                $('.addp').removeClass('red');
+                $('.addp').addClass('green');
+            })
+            $('#beforebtn').click(function() {
+                $('.bap').before('<p class="bapa">Añadido un párrafo before</p>');
+            })
+            $('#afterbtn').click(function() {
+                $('.bap').after('<p class="bapa">Añadido un párrafo after</p>');
+            })
+            $('#appendbtn').click(function() {
+                $('.pendp').append('Texto añadido después');
+            })
+            $('#prependbtn').click(function() {
+                $('.pendp').prepend('Texto añadido antes');
+            })
+            $('#htmlbtn').click(function() {
+                $('.htmlp').html('<h1>El p ha cambiado por un H1</h1>');
+            })
+            $('#attrbtn').click(function() {
+                alert($('#attrinput').attr('placeholder'));
+            })
+            $('#attrbtn').click(function() {
+                alert($('#attrinput').attr('placeholder'));
+            })
+            $('#valbtn').click(function() {
+                alert($('#valinput').val());
+            })
+            $('#gettextbtn').click(function() {
+                alert($('.textp').text());
+            })
+            $('#settextbtn').click(function() {
+               $('.textp').text($('#textinput').val());
+            })
+
+
+
+        });
+
+
+    </script>
+</head>
+
+<body>
+
+    <div class="funcion">
+        <h1>.click</h1>
+        <button id="clickbtn">CLICK</button>
+    </div>
+
+    <div class="funcion">
+        <h1>.hide y .show</h1>
+        <button id="hidebtn">HIDE</button>
+        <button id="showbtn">SHOW</button>
+        <p class="hideshowp">Este párrafo se va a mostrar u ocultar.</p>
+    </div>
+
+    <div class="funcion">
+        <h1>.toggle</h1>
+        <button id="togglebtn">TOGGLE</button>
+        <p class="togglep">Este párrafo se va a mostrar u ocultar con toggle</p>
+    </div>
+
+    <div class="funcion">
+        <h1>.slideDown, .slideUp y .slideToggle</h1>
+        <button id="slideupbtn">SLIDE UP</button>
+        <button id="slidedownbtn">SLIDE DOWN</button>
+        <button id="slidetogglebtn">SLIDE TOGGLE</button>
+        <p class="slidep">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <div class="funcion">
+        <h1>.fadeIn y .fadeOut</h1>
+        <button id="fadeinbtn">FADE IN</button>
+        <button id="fadeoutbtn">FADE OUT</button>
+        <p class="fadep">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <div class="funcion">
+        <h1>.addClass (y .removeClass)</h1>
+        <button id="addredbtn">ADD RED CLASS</button>
+        <button id="addgreenbtn">ADD GREEN CLASS</button>
+        <p class="addp">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <div class="funcion">
+        <h1>.before y .after</h1>
+        <button id="beforebtn">ADD HTML BEFORE</button>
+        <button id="afterbtn">ADD HTML AFTER</button>
+        <p class="bap">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <div class="funcion">
+        <h1>.append y .prepend</h1>
+        <button id="appendbtn">APPEND HTML</button>
+        <button id="prependbtn">PREPEND HTML</button>
+        <p class="pendp">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <div class="funcion">
+        <h1>.html</h1>
+        <button id="htmlbtn">CAMBIAR HTML DEL ELEMENTO P</button>
+        <p class="htmlp">Convierte este texto en un h1 al hacer click en el botón.</p>
+    </div>
+
+    <div class="funcion">
+        <h1>.attr</h1>
+        <button id="attrbtn">OBTENER ATTR PLACEHOLDER</button>
+        <input id="attrinput" type="text" placeholder="Ingresa tu Nombre">
+    </div>
+    <div class="funcion">
+        <h1>.val</h1>
+        <button id="valbtn">OBTENER VALOR DEL INPUT</button>
+        <input id="valinput" type="number" value="345">
+    </div>
+    <div class="funcion">
+        <h1>.text</h1>
+        <button id="settextbtn">SET TEXT</button>  
+        <input id="textinput" type="text">
+        <p class="textp">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <button id="gettextbtn">GET TEXT</button>
+
+
+
+</body>
+
+</html>
